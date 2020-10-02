@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Recipe } from './recipe.model';
+
 
 
 @Component({
@@ -10,14 +10,7 @@ import { Recipe } from './recipe.model';
 })
 export class RecipesComponent implements OnInit {
 
-  recipes: Recipe[] = [
-    new Recipe(
-      'ime1',
-      'image1',
-      'description1',
-      ['sastojak1','sastojak1']
-    )
-  ]
+
 
   constructor() { }
 
