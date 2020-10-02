@@ -1,8 +1,15 @@
 <div class="row">
-  <div class="col-md-6">
-    <p>The shopping list</p>
+  <div class="col-md-5">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of ingredients">
+        {{ingredient.name}}
+        <span class="pull-right">{{ingredient.name}}</span>
+      </li>
+    </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-7">
     <app-shopping-edit></app-shopping-edit>
   </div>
 </div>
