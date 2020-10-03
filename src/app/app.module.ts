@@ -20,6 +20,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     ShoppingEditComponent,
     RecipesComponent,
     RecipeListComponent,
+    RecipeDetailComponent,
     RecipeItemComponent,
     DropdownDirective
   ],
