@@ -1,3 +1,4 @@
+import { Ingredient } from './../shared/ingredient.model';
 export class Recipe {
   //konstruktor je built-in function koju svaka klasa
   // ima i koja nam omogucava da instanciramo klasu preko new
@@ -6,6 +7,6 @@ export class Recipe {
     public name: string,
     public recipeImage: string,
     public recipeDescription: string,
-    public recipeIngredients: string[]
+    public recipeIngredients: Ingredient[]
   ){}
 }
