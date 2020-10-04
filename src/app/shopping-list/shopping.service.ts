@@ -7,10 +7,11 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 export class ShoppingService {
 
-  private ingredientAdded = new Subject<Ingredient[]>();
-    private ingredients: Ingredient[] = [
-    new Ingredient('Jaja',10),
-    new Ingredient('Paradajiz',5)
+  ingredientAdded = new Subject<Ingredient[]>();
+
+  private ingredients: Ingredient[] = [
+  new Ingredient('Jaja',10),
+  new Ingredient('Paradajiz',5)
   ]
   constructor() { }
 
@@ -19,7 +20,7 @@ export class ShoppingService {
   }
   addIngredient(ingredient: Ingredient){
     this.ingredients.push(ingredient);
-    return this.ingredientAdded.next(this.ingredients.slice());
+    this.ingredientAdded.next(this.ingredients.slice());
     //logic
   }
   updateIngredient(index: number, ingredient: Ingredient){
