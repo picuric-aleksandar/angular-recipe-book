@@ -1,5 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
+
+import { ShoppingService } from './../shopping.service';
+import { Ingredient } from 'src/app/shared/ingredient.model';
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
@@ -11,7 +14,7 @@ export class ShoppingEditComponent implements OnInit {
   @ViewChild('ingredientAmount',{static: true}) amount: ElementRef;
 
   constructor(
-    private shoppingService: ShoppinService
+    private shoppingService: ShoppingService
   ) { }
 
   ngOnInit(): void {
@@ -20,8 +23,11 @@ export class ShoppingEditComponent implements OnInit {
 
   onAddIngredient(){
     const name = this.name.nativeElement.value;
-    const amount = this.name.nativeElement.value;
-    this.shoppingService.addIngredient({name: name, amount: amount})
+    const amount = this.amount.nativeElement.value;
+    const newIngredient = new Ingredient(name,amount)
+    console.log(name);
+    console.log(amount);
+    this.shoppingService.addIngredient(newIngredient)
   }
 
   onUpdateIngredient(){}
