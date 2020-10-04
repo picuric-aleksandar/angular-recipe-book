@@ -19,7 +19,19 @@ export class ShoppingService {
     return this.ingredients.slice();
   }
   addIngredient(ingredient: Ingredient){
-    this.ingredients.push(ingredient);
+    for(let item of this.ingredients){
+
+      // if(item.name.toLowerCase().indexOf(ingredient.name.toLowerCase()) !== -1){ ovo je po svakom karakteru prop-a da trazi
+      if(item.name.toLowerCase() === ingredient.name.toLowerCase()){
+        console.log(item.name);
+        item.amount += ingredient.amount;
+        break;
+      }else{
+        this.ingredients.push(ingredient);
+        break;
+      }
+    }
+
     this.ingredientAdded.next(this.ingredients.slice());
     //logic
   }
