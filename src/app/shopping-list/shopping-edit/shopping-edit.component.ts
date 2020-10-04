@@ -3,8 +3,6 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ShoppingService } from '../shopping.service';
 
 
-import { ShoppingService } from './../shopping.service';
-import { Ingredient } from 'src/app/shared/ingredient.model';
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
