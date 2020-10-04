@@ -16,7 +16,9 @@ export class ShoppingEditComponent implements OnInit {
   }
 
 
-  onAddIngredient(){}
+  onAddIngredient(){
+    //logic
+  }
 
   onUpdateIngredient(){}
 
