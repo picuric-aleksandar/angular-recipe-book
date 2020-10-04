@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-md-5">
+  <div class="col-md-5 col-sm-6">
     <ul class="list-group">
       <a
         class="list-group-item"
         style="cursor: pointer;"
         *ngFor="let ingredient of ingredients">
         {{ingredient.name}}
-        <span class="pull-right custom-badge">{{ingredient.amount}}</span>
+        <span class="pull-right">{{ingredient.amount}}</span>
       </a>
     </ul>
   </div>
