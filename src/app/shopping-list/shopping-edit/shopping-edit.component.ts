@@ -10,14 +10,18 @@ export class ShoppingEditComponent implements OnInit {
   @ViewChild('ingredientName',{static: true}) name: ElementRef;
   @ViewChild('ingredientAmount',{static: true}) amount: ElementRef;
 
-  constructor() { }
+  constructor(
+    private shoppingService: ShoppinService
+  ) { }
 
   ngOnInit(): void {
   }
 
 
   onAddIngredient(){
-    //logic
+    const name = this.name.nativeElement.value;
+    const amount = this.name.nativeElement.value;
+    this.shoppingService.addIngredient({name: name, amount: amount})
   }
 
   onUpdateIngredient(){}
