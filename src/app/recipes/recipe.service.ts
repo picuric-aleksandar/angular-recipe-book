@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 import { Recipe } from './recipe.model';
 
@@ -6,6 +7,8 @@ import { Recipe } from './recipe.model';
   providedIn: 'root'
 })
 export class RecipeService {
+
+  selectedRecipe = new Subject<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe(
