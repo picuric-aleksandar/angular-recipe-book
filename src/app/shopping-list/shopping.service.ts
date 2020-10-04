@@ -6,7 +6,7 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 export class ShoppingService {
 
-  ingredients: Ingredient[] = [
+  private ingredients: Ingredient[] = [
     new Ingredient('Jaja',10),
     new Ingredient('Paradajiz',5)
   ]
