@@ -17,11 +17,12 @@ export class ShoppingService {
   }
   addIngredient(ingredient: Ingredient){
     this.ingredients.push(ingredient);
+    //logic
   }
   updateIngredient(index: number, ingredient: Ingredient){
 
   }
   deleteIngredient(index: number){
-    
+
   }
 }
